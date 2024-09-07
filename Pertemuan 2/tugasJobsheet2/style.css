@@ -1,0 +1,107 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #ddd;
+  line-height: 1.65;
+  padding-bottom: 1000px;
+}
+
+.bg{
+  background: linear-gradient(to right, #0a0a3a, #ff6700);
+  width:100%;
+  max-width: 1200px;
+  margin: 50px auto 0;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.bg h1{
+  font-size: 3em;
+  color: #fff;
+}
+
+.bg h1 span{
+  color: darkblue;
+}
+
+.container-satu{
+  width: 100%;
+  max-width: 1200px;
+  gap: 10px;
+  margin:auto;
+  background-color: #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.kolom-utama{
+  width: 900px;
+  order: 2;
+}
+
+.kolom-utama h2{
+  font-size: 4em;
+  margin: 0;
+}
+
+.kolom-utama h2 span{
+  color: aqua;
+}
+
+.sidebar-satu{
+  width: 200px;
+  order: 1;
+}
+
+.sidebar-satu h3{
+  font-size: 1.5em;
+}
+
+.sidebar-dua h3{
+  font-size: 1.5em;
+}
+
+.sidebar-satu ul{
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.sidebar-satu ul li a{
+  text-decoration: none;
+  color: 
+}
+
+.sidebar-dua{
+  width: 200px;
+  order: 3;
+}
+
+footer {
+  text-align: center;
+  margin: 20px auto;
+  font-weight: bold;
+}
+
+footer a{
+  color: darkblue;
+  font-size: 1.4em;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+footer a:hover{
+  color: gray;
+}
