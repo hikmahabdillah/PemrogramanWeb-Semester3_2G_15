@@ -51,4 +51,12 @@ echo "$a *= $b = " . ($a *= $b) . "<br>";
 echo "$a /= $b = " . ($a /= $b) . "<br>";
 echo "$a % $b = " . ($a % $b) . "<br>";
 
+echo "<br>";
+
+$hasilIdentik = $a === $b;
+$hasilTidakIdentik = $a !== $b;
+
+echo "Hasil Identik : " . ($hasilIdentik ? "True" : "False") . "<br>";
+echo "Hasil Tidak Identik : " . ($hasilTidakIdentik ? "True" : "False");
+
 ?>
