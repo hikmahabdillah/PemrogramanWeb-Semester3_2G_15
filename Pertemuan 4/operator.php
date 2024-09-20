@@ -44,4 +44,11 @@ echo "Hasil OR = $a || $b " . ($hasilOr ? 'true' : 'false'). "<br>" ;
 echo "Hasil NOT A = !$a " . ($hasilNotA ? 'true' : 'false') ."<br>";
 echo "Hasil NOT B = !$b " . ($hasilNotB ? 'true' : 'false'). "<br>";
 
+echo "<br>";
+echo "$a += $b = " . ($a += $b) . "<br>";
+echo "$a -= $b = " . ($a -= $b) . "<br>";
+echo "$a *= $b = " . ($a *= $b) . "<br>";
+echo "$a /= $b = " . ($a /= $b) . "<br>";
+echo "$a % $b = " . ($a % $b) . "<br>";
+
 ?>
