@@ -22,8 +22,28 @@ $menu = [
 function tampilkanMenuBertingkat(array $menu)
 {
   echo "<ul>";
-  foreach ($menu as $key => $item) {
+  foreach ($menu as $item) {
     echo "<li>{$item['nama']}</li>";
+    
+    // cara efisien
+    if (isset($item['subMenu']) && is_array($item['subMenu'])) {
+      tampilkanMenuBertingkat($item['subMenu']);
+    }
+
+    // if ($item['nama'] == "Berita") {
+    //   foreach ($item['subMenu'] as $key => $item) {
+    //     echo "<ul>";
+    //     echo "<li>{$item['nama']}</li>";
+    //     if ($item['nama'] == "Wisata") {
+    //       foreach ($item['subMenu'] as $key => $item) {
+    //         echo "<ul>";
+    //         echo "<li>{$item['nama']}</li>";
+    //         echo "</ul>";
+    //       }
+    //     }
+    //     echo "</ul>";
+    //   }
+    // }
   }
   echo "</ul>";
 }
