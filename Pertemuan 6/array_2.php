@@ -37,7 +37,7 @@
     // echo "Jenis Kelamin : {$Dosen ['jenis_kelamin']} <br>";
   ?>
   <div class="container">
-    <img src="https://images2.minutemediacdn.com/image/upload/c_crop,w_1902,h_1069,x_2158,y_55/c_fill,w_912,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/si/01j8wht8hqxh3e313bh8.jpg" alt="" width="170px/>
+    <img src="https://cdn-icons-png.flaticon.com/512/2507/2507657.png" alt="" width="170px/>
     <div class="data">
       <table cellpadding="5">
         <tr>
