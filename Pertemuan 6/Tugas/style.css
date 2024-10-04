@@ -1,0 +1,66 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 850px;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 7px 7px #888888;
+  /* background-color: #F8F8F9; */
+  transition: all 0.3s;
+}
+.container:hover {
+  transform: translate(7px, 7px);
+  box-shadow: 0px 0px #fff;
+}
+
+.container > span {
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #888;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.container .data {
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.container .data table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.data table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.container .data table tr:first-child {
+  background-color: #ddd;
+}
+
+div.container div.data h2.rata {
+  font-size: 1.1rem;
+  font-family: Arial, sans-serif;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+.container .data h2 span.age {
+  font-weight: bold;
+  text-decoration: underline;
+}
