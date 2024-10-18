@@ -1,7 +1,6 @@
 <?php
 // Lokasi penyimpanan file yang diunggah
 $targetDirectory = "imagesUpload/";
-
 $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif');
 
 // Periksa apakah direktori penyimpanan ada, jika tidak maka buat
