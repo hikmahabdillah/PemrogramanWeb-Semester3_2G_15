@@ -1,19 +1,28 @@
 <?php
-if(isset($_POST["submit"])){
-  $target_dir = "uploads/"; // Direktori tujuan untuk menyimpan file
-  $target_file = $target_dir . basename($_FILES["myfile"]["name"]);
-  $file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+if(isset($_FILES['file'])) {
+  $errors = array();
 
-  $allowed_extensions = array("txt", "pdf", "doc", "docx");
-  $max_size = 3 * 1024 * 1024; // 3 MB
+  $file_name = $_FILES['file']['name'];
+  $file_size = $_FILES['file']['size'];
+  $file_tmp = $_FILES['file']['tmp_name'];
+  $file_type = $_FILES['file']['type'];
 
-  if (in_array($file_type, $allowed_extensions) && $_FILES["myfile"]["size"] <= $max_size) {
-    if (move_uploaded_file($_FILES["myfile"]["tmp_name"], $target_file)) {
+  @$file_ext = strtolower("" . end(explode('.', $_FILES['file']['name'])) . "");
+  $extensions = array("pdf", "doc", "docx", "txt");
+
+  if(in_array($file_ext, $extensions) === false) {
+      $errors[] = "Ekstensi file yang diizinkan adalah PDF, DOC, DOCX, atau TXT.";
+  }
+  
+  // file size : 2mb
+  if($file_size > 2097152) {
+      $errors[] = "Ukuran file tidak boleh lebih dari 2 MB";
+  }
+
+  if(empty($errors) == true) {
+      move_uploaded_file($file_tmp, "documents/".$file_name);
       echo "File berhasil diunggah.";
-    } else {
-      echo "Gagal mengunggah file.";
-    }
   } else {
-    echo "File tidak valid atau melebihi ukuran maksimum yang diizinkan.";
+      echo implode("", $errors);
   }
 } 

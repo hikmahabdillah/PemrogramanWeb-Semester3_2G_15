@@ -1,0 +1,52 @@
+Asc
+public void sortRate() {
+    if (isEmpty()) {
+      return;
+    }
+    Node14 sorted = null;
+    Node14 current = head;
+
+    while (current != null) {
+      Node14 next = current.next;
+      if (sorted == null || sorted.dataFilm.namaFilm.compareTo(current.dataFilm.namaFilm) >= 0) {
+        current.next = sorted;
+        if (sorted != null) {
+          sorted.prev = current;
+        }
+        current.prev = null;
+        sorted = current;
+      } else {
+        Node14 temp = sorted;
+        while (temp.next != null && temp.next.dataFilm.namaFilm.compareTo(current.dataFilm.namaFilm) < 0) {
+          temp = temp.next;
+        }
+        current.next = temp.next;
+        if (temp.next != null) {
+          temp.next.prev = current;
+        }
+        temp.next = current;
+        current.prev = temp;
+      }
+      current = next;
+    }
+
+    head = sorted;
+  }
+
+public void bubbleSortRating() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Data Film Kosong.");
+        } else {
+            for (int i = 0; i < size - 1; i++) {
+                Node13 current = head;
+                for (int j = 0; j < size - 1; j++) {
+                    if (current.dataFilm.rating < current.next.dataFilm.rating) {
+                        DaftarFilm13 tmp = current.dataFilm;
+                        current.dataFilm = current.next.dataFilm;
+                        current.next.dataFilm = tmp;
+                    }
+                    current = current.next;
+                }
+            }
+        }
+    }

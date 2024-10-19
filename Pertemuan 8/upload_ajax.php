@@ -11,7 +11,7 @@ if(isset($_FILES['files'])) {
         $file_size = $_FILES['files']['size'][$key];
         $file_tmp = $_FILES['files']['tmp_name'][$key];
 
-        // Ambil ekstensi file
+        // get ekstensi file
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
 
         // Validasi ekstensi
@@ -45,5 +45,4 @@ if(isset($_FILES['files'])) {
 
 }
 
-?>
 
